@@ -1,66 +1,77 @@
-# GAN-Face-Generator
-In this project, i defined and train a DCGAN on a dataset of faces. The goal is to get a generator network to generate new images of faces that look as realistic as possible.
+# Face-Generation-using-GAN
 
-# Getting Started
+This project was developed as a part of Udacity's Deep Learning Nanodegree. In this project, i have created a General Advarsarial Networks from scratch using pytorch. 
 
-## Get the Data
-You'll be using the CelebFaces Attributes Dataset [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) to train your adversarial networks.
+## Getting Started
 
-This dataset is more complex than the number datasets (like MNIST or SVHN) and so, you should prepare to define deeper networks and train them for a longer time to get good results. It is suggested that you utilize a GPU for training.
+Just run all the cells in the ipynb notebook. Tune the hyper parameters for better accuracy.
+Get Data from [here](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)
 
 ### Prerequisites
 
-* Python 3.
-* Numpy 
-* Pandas
+* Python 3
+* Numpy
 * MatPlotLib
 * OpenCv
-* Pytorch. 
+* Pytorch 
 
-## Project Instruction
+### Install
 
-### Instructions
-1. Clone the repository and navigate to the downloaded folder.
-	```	
-	git clone https://github.com/shyamStarwalt/GAN-Face-Generator.git
-	```
+1. Download the project materials from our GitHub repository. You can get download the repository with
+  ```
+  git clone https://github.com/vickipedia6/Face-Generation-using-GAN.git
+  ```
+ 2. Download anaconda or miniconda based on the instructions in the [Anaconda documentation](https://docs.anaconda.com).
+ 
+ 3. Create a new conda environment:
+  ```
+  conda create --name deep-learning python=3
+  ```
+ 4. Enter your new environment:
+  * Mac/Linux: >> ``` source activate deep-learning ```
+  * Windows: >>  ```activate deep-learning ```
+  
+ 5. Ensure you have numpy, matplotlib, pandas, and jupyter notebook installed by doing the following:
+  ```
+  conda install numpy matplotlib jupyter notebook
+  ```
+ 6. Run the following to open up the notebook server:
+  ```
+  jupyter notebook dlnd_face_generation.ipynb
+  ```
+ 7. Execute all the cells in the code.
+ 
 
-2. Download and Install Anaconda [from here](https://www.anaconda.com/)
+### Project results
 
-3. Install the above packages mentioned in the Prerequisites (Anaconda Prompt)
-
-4. Open the cloned repository and navigate to
-	```
-	cd Face-Generator
-	```
-5. Open the Face-Generator.ipynb
-	```
-	jupyter notebook Face-Generator.ipynb	
-	```
-6. Read and follow the instructions! This repository doesn't include any dataset you need. You can check out the getting started to download them.
-
-## Project Information
-
-### Contents
-
-- Intro
-- Step 0: Import Datasets
-- Step 1: Define the Model
-- Step 2: create a discriminator and a generator.
-- Step 3: Create a GAN to Generate new faces (from Scratch) 
-- Step 4: Build a complete network
-- Step 5: Write your Algorithm
-- Step 6: Test Your Algorithm
+This project has met the following specifications:
+* The submission includes all required, complete notebook files.
+* All the unit tests in project have passed.
+* The function get_dataloader should transform image data into resized, Tensor image types and return a DataLoader that batches all the   training data into an appropriate size.
+* Pre-process the images by creating a scale function that scales images into a given pixel range. This function should be used later,     in the training loop.
+* The Discriminator class is implemented correctly; it outputs one value that will determine whether an image is real or fake.
+* The Generator class is implemented correctly; it outputs an image of the same shape as the processed training data.
+* This function should initialize the weights of any convolutional or linear layer with weights taken from a normal distribution with a   mean = 0 and standard deviation = 0.02.
+* The loss functions take in the outputs from a discriminator and return the real or fake loss.
+* There are optimizers for updating the weights of the discriminator and generator. These optimizers should have appropriate               hyperparameters.
+* Real training images should be scaled appropriately. The training loop should alternate between training the discriminator and           generator networks..
+* There is not an exact answer here, but the models should be deep enough to recognize facial features and the optimizers should have     parameters that help wth model convergence.
+* The project generates realistic faces. It should be obvious that generated sample images look like faces.
+* The question about model improvement is answered.
 
 ## Losses
 
-### Model scratch:
-Training loss: 3.508 ... Validation loss: 0.127
+### Generator vs Discriminator Loss :
 
-### Accuracy:
+<img src='/download.png' width=500 px>
 
-### Model scratch:
-Accuracy : 14%
+## Generated Faces
+
+<img src='/generated_faces.png' width=500 px>
+
+## Built With
+
+* Python 3
 
 ## License
 
@@ -68,4 +79,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-* The data comes from Udacity.
+* The data comes from [here](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)
+
