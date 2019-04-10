@@ -63,11 +63,11 @@ This project has met the following specifications:
 
 ### Generator vs Discriminator Loss :
 
-<img src='/download.png' width=500 px>
+<img src='images/download.png' width=500 px>
 
 ## Generated Faces
 
-<img src='/generated_faces.png' width=500 px>
+<img src='images/generated_faces.png' width=500 px>
 
 ## Built With
 
